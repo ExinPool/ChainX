@@ -53,7 +53,7 @@ Finally, add crontab like this.
 
 The crontab will run every minutes then you can check the log in `/home/${YOUR_USER}/chainx_blocks.log`.
 
-When the node is not full sync with the remote node, you can receive QQ email. It's highly recommended bind the QQ email with WeChat, when you can receive the email in time.
+When the node is not full sync with the remote node, you can receive QQ email. It's highly recommended bind the QQ email with WeChat, then you can receive the alarm email in time.
 
 ## Features
 
