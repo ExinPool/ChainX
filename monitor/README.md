@@ -20,7 +20,11 @@
 
 ### Clone
 
-- Clone this repo to your server using `cd /data/ExinPool && git clone https://github.com/ExinPool/ChainX`
+- Clone this repo to your server using:
+
+``` bash
+cd /data/ExinPool && git clone https://github.com/ExinPool/ChainX
+```
 
 ### Setup
 
