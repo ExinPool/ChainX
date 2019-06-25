@@ -20,7 +20,7 @@
 
 ### Clone
 
-- Clone this repo to your server using `git clone https://github.com/ExinPool/ChainX`
+- Clone this repo to your server using `cd /data/ExinPool && git clone https://github.com/ExinPool/ChainX`
 
 ### Setup
 
@@ -31,7 +31,7 @@ apt-get -y install pip
 pip install websocket_client
 ```
 
-Change QQ mail configurations in `send_mail`.
+Change QQ mail configurations in `send_mail` function.
 
 ``` bash
     sender='xxxxxxxx'
