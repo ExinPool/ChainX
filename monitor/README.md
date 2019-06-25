@@ -84,5 +84,5 @@ Reach out to us at one of the following places!
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- **[MIT license](https://opensource.org/licenses/mit-license.php)**
 - Copyright 2019 © <a href="https://exinpool.com" target="_blank">ExinPool</a>.
