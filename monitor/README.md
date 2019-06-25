@@ -20,7 +20,7 @@
 
 ### Clone
 
-- Clone this repo to your local machine using `git clone https://github.com/ExinPool/ChainX`
+- Clone this repo to your server using `git clone https://github.com/ExinPool/ChainX`
 
 ### Setup
 
@@ -47,7 +47,9 @@ Finally, add crontab like this.
 * * * * * nohup bash /data/ExinPool/ChainX/monitor/chainx_blocks_crontab.sh &
 ```
 
-The crontab will run every minutes then you can check the log in `/home/${YOUR_USER}/chainx_blocks.log`. When the node is not full sync with the remote node, you can receive QQ email. It's highly recommended bind the QQ email with WeChat, when you can receive the email in time.
+The crontab will run every minutes then you can check the log in `/home/${YOUR_USER}/chainx_blocks.log`.
+
+When the node is not full sync with the remote node, you can receive QQ email. It's highly recommended bind the QQ email with WeChat, when you can receive the email in time.
 
 ## Features
 
