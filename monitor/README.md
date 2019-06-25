@@ -64,6 +64,8 @@ To be continued.
 
 ## FAQ
 
+To be continued.
+
 ## Support
 
 Reach out to us at one of the following places!
