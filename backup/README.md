@@ -47,7 +47,7 @@ Add crontab like this.
 
 The crontab will run every day at 3am then you can check the log in `/home/${YOUR_USER}/chainx_backup.log`.
 
-The backup only keep 3 days. You can change this according to your server disk capacity.
+The current backup process takes about 20 minutes. It will take longer when the blocks grows. And the backup only keep 3 days. You can change this according to your server disk capacity.
 
 ## Features
 
