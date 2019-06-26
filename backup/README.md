@@ -51,8 +51,9 @@ The backup only keep 3 days. You can change this according to your server disk c
 
 ## Features
 
-- Backup ChainX node regularly.
-- Archive backup according to your demand.
+- Backup ChainX node regularly
+- Compress when packing the data
+- Archive backup according to your demand
 
 ## Contributing
 
