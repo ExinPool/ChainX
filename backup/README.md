@@ -17,6 +17,7 @@
 ## Installation
 
 - Ubuntu 16.04.1 LTS
+- Written in bash
 
 ### Clone
 
