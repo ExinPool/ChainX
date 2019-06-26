@@ -41,7 +41,7 @@ SLEEP_TIME=60
 Add crontab like this.
 
 ``` bash
-0 3 * * * nohup bash /data/monitor/exinpool/ChainX/chainx_backup.sh >> /home/${YOUR_USER}/chainx_backup.log &
+0 3 * * * nohup bash /data/ExinPool/ChainX/backup//chainx_backup.sh >> /home/${YOUR_USER}/chainx_backup.log &
 ```
 
 The crontab will run every day at 3am then you can check the log in `/home/${YOUR_USER}/chainx_backup.log`.
