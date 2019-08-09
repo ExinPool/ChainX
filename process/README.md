@@ -24,9 +24,9 @@
 - Clone this repo to your server using:
 
 ``` bash
-mkdir -p /data/monitor/exinpool
+sudo mkdir -p /data/monitor/exinpool
 cd /data/monitor/exinpool
-git clone https://github.com/ExinPool/MassGrid
+sudo git clone https://github.com/ExinPool/MassGrid
 ```
 
 ### Setup
