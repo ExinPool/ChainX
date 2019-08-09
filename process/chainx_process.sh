@@ -29,10 +29,10 @@ process=`ps -ef | grep ${PROCESS} | grep config | grep -v grep | wc -l`
 
 if [ $process -eq ${PROCESS_NUM} ]
 then
-    LOG="`date '+%Y-%m-%d %H:%M:%S'` `whoami` INFO ${SERVICE} node process is normal."
+    LOG="`date '+%Y-%m-%d %H:%M:%S'` `hostname` `whoami` INFO ${SERVICE} node process is normal."
     echo $LOG >> $LOG_FILE
 else
-    LOG="`date '+%Y-%m-%d %H:%M:%S'` `whoami` ERROR ${SERVICE} node process is abnormal."
+    LOG="`date '+%Y-%m-%d %H:%M:%S'` `hostname` `whoami` ERROR ${SERVICE} node process is abnormal."
     echo $LOG >> $LOG_FILE
     sendMail
     echo $LOG >> $FILE
