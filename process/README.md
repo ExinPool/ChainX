@@ -72,6 +72,7 @@ SERVICE="ChainX"
 Add crontab like this.
 
 ``` bash
+# ChainX node process monitor
 * * * * * nohup bash /data/monitor/exinpool/ChainX/process/chainx_process.sh >> /data/monitor/exinpool/ChainX/process/chainx_process.log &
 ```
 
