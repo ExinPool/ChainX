@@ -24,7 +24,9 @@
 - Clone this repo to your server using:
 
 ``` bash
-cd /data/ExinPool && git clone https://github.com/ExinPool/ChainX
+mkdir -p /data/monitor/exinpool
+cd /data/monitor/exinpool
+git clone https://github.com/ExinPool/MassGrid
 ```
 
 ### Setup
