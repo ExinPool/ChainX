@@ -16,7 +16,7 @@ source config.shlib
 service="$(config_get SERVICE)"
 process="$(config_get PROCESS)"
 process_num="$(config_get PROCESS_NUM)"
-process_num_var=`ps -ef | grep ${process} | grep -v grep | wc -l`
+process_num_var=`ps -ef | grep ${process} | grep config | grep -v grep | wc -l`
 log_file="$(config_get LOG_FILE)"
 webhook_url="$(config_get WEBHOOK_URL)"
 access_token="$(config_get ACCESS_TOKEN)"

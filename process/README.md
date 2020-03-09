@@ -31,54 +31,31 @@ sudo git clone https://github.com/ExinPool/MassGrid
 
 ### Setup
 
-Install related dependencies.
+Search `7000000012` in [Mixin Messenger](https://mixin.one/messenger) and add **[Webhook](https://mixin.one/codes/4d792128-1db8-4baf-8d90-d0d8189a4a7e)** as contact.
+
+Invite Webhook and somebody who want to receive monitor message to a small group in Mixin Messenger. Open Webhook in the group, you can see the access token.
+
+> Note: The access token is only available for the owner of the group.
+
+Copy `config.cfg.defaults` to `config.cfg` and change some varibles like this in the `config.cfg`.
 
 ``` bash
-sudo apt-get -y install ssmtp
-```
-
-Update `ssmtp.conf`.
-
-``` bash
-sudo vim /etc/ssmtp/ssmtp.conf
-
-sudo grep "^#" -v /etc/ssmtp/ssmtp.conf
-```
-
-The `ssmtp.conf` like this.
-
-``` bash
-root=YOUR_EMAIL
-
-mailhub=smtp.exmail.qq.com:465
-
-rewriteDomain=qq.com
-AuthUser=YOUR_EMAIL
-AuthPass=YOUR_PASSWORD
-FromLineOverride=YES
-UseTLS=YES
-```
-
-Change some varibles like.
-
-``` bash
-FILE="ssmtp.log"
-LOG_FILE="process_state.log"
-RECV="YOUR_EMAIL"
-SSMTP="/usr/sbin/ssmtp"
-PROCESS="chainx"
+SERVICE=ChainX
+PROCESS=chainx
 PROCESS_NUM=2
-SERVICE="ChainX"
+LOG_FILE=chainx_process.log
+WEBHOOK_URL=https://webhook.exinwork.com/api/send?access_token
+ACCESS_TOKEN=YOUR_ACCESS_TOKEN
 ```
 
-Add crontab like this.
+Add crontab like this in the server.
 
 ``` bash
 # ChainX node process monitor
-* * * * * nohup bash /data/monitor/exinpool/ChainX/process/chainx_process.sh >> /data/monitor/exinpool/ChainX/process/chainx_process.log &
+* * * * * cd /data/monitor/exinpool/ChainX/process && bash chainx_process.sh >> chainx_process.log &
 ```
 
-The crontab will run every minute then you can check the log in `chainx_process.log`.
+The crontab will run every minute then you can check the log in the `chainx_process.log`.
 
 ## Features
 
