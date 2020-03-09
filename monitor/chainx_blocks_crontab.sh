@@ -9,4 +9,4 @@
 # Date: 2019-6-25
 # Time: 16:29:30
 
-nohup /usr/bin/python /data/ExinPool/ChainX/monitor/chainx_blocks.py &
+nohup /usr/bin/python /data/monitor/exinpool/ChainX/monitor/chainx_blocks.py &
