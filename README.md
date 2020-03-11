@@ -14,7 +14,7 @@
 - [Support](#support)
 - [License](#license)
 
-# Explanation
+## Explanation
 
 * monitor: ChainX blocks sync status monitor
 * process: ChainX service process monitor
