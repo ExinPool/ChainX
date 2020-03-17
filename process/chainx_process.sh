@@ -28,8 +28,8 @@ then
 else
     log="`date '+%Y-%m-%d %H:%M:%S'` `hostname` `whoami` ERROR ${service} node process is abnormal."
     echo $log >> $log_file
-    curl ${webhook_url}=${access_token} -XPOST -H 'Content-Type: application/json' -d '{"category":"PLAIN_TEXT","data":"'"$log"'"}' > /dev/null 2>&1
-    if [ $? -eq 0 ]
+    success=`curl ${webhook_url}=${access_token} -XPOST -H 'Content-Type: application/json' -d '{"category":"PLAIN_TEXT","data":"'"$log"'"}' | awk -F',' '{print $1}' | awk -F':' '{print $2}'`
+    if [ "$success" = "true" ]
     then
         log="`date '+%Y-%m-%d %H:%M:%S'` UTC `hostname` `whoami` INFO send mixin successfully."
         echo $log >> $log_file
