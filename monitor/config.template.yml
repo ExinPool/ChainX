@@ -5,11 +5,12 @@ webhook:
   webhook_url: "https://webhook.exinwork.com/api/send?access_token={}"
   access_token: ""
 node:
-  api_url: "http://api.mixinwallet.com/getinfo?node="
+  name: "ExinPool"
   node_tag: "VALIDATOR"
   local_node: "ws://127.0.0.1:8087"
   remote_node_1: "wss://ws.chainxtools.com"
   remote_node_2: "wss://chainx.maiziqianbao.net/ws"
+  not_sync_blocks: 10
 mail:
   sender: ""
   password: ""

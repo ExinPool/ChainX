@@ -80,24 +80,26 @@ def check_node(node):
     return height
 
 def check_sync():
+    name = config["node"]["name"]
     node_tag = config["node"]["node_tag"]
     service_name = config["service_name"]
     local_node = config["node"]["local_node"]
     remote_node_1 = config["node"]["remote_node_1"]
     remote_node_2 = config["node"]["remote_node_2"]
+    not_sync_blocks = config["node"]["not_sync_blocks"]
 
     localHeight = check_node(local_node)
     remoteHeight1 = check_node(remote_node_1)
 
-    if abs(localHeight - remoteHeight1) < 10:
-        logging.info(service_name + " " + node_tag + " Node: " + local_node + " is full sync.")
+    if abs(localHeight - remoteHeight1) < not_sync_blocks:
+        logging.info(service_name + " " + node_tag + " " + name + " Node: " + local_node + " is full sync.")
     else:
         remoteHeight2 = check_node(remote_node_2)
-        if abs(localHeight - remoteHeight2) < 10:
-            logging.info(service_name + " " + node_tag + " Node: " + local_node + " is full sync.")
+        if abs(localHeight - remoteHeight2) < not_sync_blocks:
+            logging.info(service_name + " " + node_tag + " " + name + " Node: " + local_node + " is full sync.")
         else:
-            logging.error(service_name + node_tag + " Node: " + local_node + " is not full sync.")
-            send_mixin(service_name + " " + node_tag + " Node: " + local_node + " is not full sync.")
+            logging.error(service_name + " " + node_tag + " " + name + " Node: " + local_node + " is not full sync.")
+            send_mixin(service_name + " " + node_tag + " " + name + " Node: " + local_node + " is not full sync.")
 
 def main():
     log_config()
